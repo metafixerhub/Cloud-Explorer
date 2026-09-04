@@ -177,7 +177,7 @@ export async function batchDeleteFiles(req, res) {
 
     let totalDeletedBytes = 0;
     const deletedCount = filesToDelete.length;
-    const STORE_BACKEND_URL = process.env.STORE_BACKEND_URL || 'http://localhost:5001';
+    const STORE_BACKEND_URL = process.env.STORE_BACKEND_URL || 'https://cloud-explorer-store.onrender.com';
 
     // Securely delete each item from vault disk / cloud storage via StoreBackend
     for (const file of filesToDelete) {

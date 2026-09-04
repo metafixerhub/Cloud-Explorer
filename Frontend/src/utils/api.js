@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://atharjahan-files.onrender.com/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://cloud-explorer.onrender.com/api',
   withCredentials: true, // Send secure HTTP-only cookies across network requests
   headers: {
     'Content-Type': 'application/json'
@@ -31,5 +31,5 @@ api.interceptors.response.use((response) => {
   return Promise.reject(error);
 });
 
-export const STORE_API_URL = import.meta.env.VITE_STORE_API_URL || 'http://localhost:5001';
+export const STORE_API_URL = import.meta.env.VITE_STORE_API_URL || 'https://cloud-explorer-store.onrender.com';
 export default api;
